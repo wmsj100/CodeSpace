@@ -1,0 +1,287 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Feb 11 12:57:38 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5060 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x56407afb72a0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/Github/python_study/flask/study4/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56407afb72a0 pid: 11352 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11352)
+spawned uWSGI worker 1 (pid: 11354, cores: 1)
+Python auto-reloader enabled
+[pid: 11354|app: 0|req: 1/1] 183.202.108.237 () {42 vars in 812 bytes} [Tue Feb 11 12:58:30 2020] GET / => generated 1603 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 2/2] 183.202.108.237 () {42 vars in 741 bytes} [Tue Feb 11 12:58:31 2020] GET /static/style.css => generated 1630 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 9 headers in 321 bytes (0 switches on core 0)
+[pid: 11354|app: 0|req: 3/3] 183.202.108.237 () {42 vars in 752 bytes} [Tue Feb 11 12:58:31 2020] GET /favicon.ico => generated 232 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 86 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 4/4] 183.202.108.237 () {44 vars in 862 bytes} [Tue Feb 11 12:59:19 2020] GET /create => generated 623 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 5/5] 183.202.108.237 () {52 vars in 1050 bytes} [Tue Feb 11 12:59:24 2020] POST /create => generated 209 bytes in 12 msecs (HTTP/1.1 302) 4 headers in 131 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 6/6] 183.202.108.237 () {46 vars in 887 bytes} [Tue Feb 11 12:59:24 2020] GET / => generated 1840 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 7/7] 183.202.108.237 () {44 vars in 846 bytes} [Tue Feb 11 13:20:35 2020] GET /flask => generated 232 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 86 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 8/8] 183.202.108.237 () {42 vars in 805 bytes} [Tue Feb 11 13:20:38 2020] GET / => generated 1840 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 9/9] 183.202.108.237 () {42 vars in 729 bytes} [Tue Feb 11 13:20:38 2020] GET /static/style.css => generated 1630 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 9 headers in 321 bytes (0 switches on core 0)
+[pid: 11354|app: 0|req: 10/10] 183.202.108.237 () {42 vars in 805 bytes} [Tue Feb 11 13:20:48 2020] GET / => generated 1840 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 11/11] 183.202.108.237 () {42 vars in 805 bytes} [Tue Feb 11 13:35:35 2020] GET / => generated 1840 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 12/12] 183.202.108.237 () {42 vars in 804 bytes} [Tue Feb 11 23:45:40 2020] GET / => generated 1840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 13/13] 183.202.108.237 () {46 vars in 810 bytes} [Tue Feb 11 23:45:40 2020] GET /static/style.css => generated 0 bytes in 1 msecs (HTTP/1.1 304) 6 headers in 224 bytes (0 switches on core 0)
+[pid: 11354|app: 0|req: 14/14] 183.202.108.237 () {42 vars in 804 bytes} [Tue Feb 11 23:45:40 2020] GET / => generated 1840 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 15/15] 120.208.208.42 () {36 vars in 553 bytes} [Wed Feb 12 07:40:46 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 16/16] 120.208.208.42 () {36 vars in 575 bytes} [Wed Feb 12 07:40:46 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 17/17] 183.202.108.177 () {40 vars in 729 bytes} [Wed Feb 12 18:52:29 2020] GET / => generated 1673 bytes in 13 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 18/18] 183.202.108.177 () {40 vars in 653 bytes} [Wed Feb 12 18:52:29 2020] GET /static/style.css => generated 1630 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 8 headers in 307 bytes (0 switches on core 0)
+[pid: 11354|app: 0|req: 19/19] 183.202.108.177 () {40 vars in 664 bytes} [Wed Feb 12 18:52:29 2020] GET /favicon.ico => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 20/20] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:53:41 2020] GET / => generated 1673 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 21/21] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:53:42 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 11354|app: 0|req: 22/22] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:53:42 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+Wed Feb 12 18:54:35 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 18:54:39 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5060 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x557cb0dbc3f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/Github/python_study/flask/study4/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557cb0dbc3f0 pid: 22266 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22266)
+spawned uWSGI worker 1 (pid: 22268, cores: 1)
+Python auto-reloader enabled
+[pid: 22268|app: 0|req: 1/1] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:54:42 2020] GET / => generated 1673 bytes in 25 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 22268|app: 0|req: 2/2] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:54:43 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file /home/ubuntu/Github/python_study/flask/study4/flaskr/auth.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 22268)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/Github/python_study/flask/study4
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:5060)
+running /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 18:55:01 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:5060 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x55647e906c20
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/Github/python_study/flask/study4/ to pythonpath.
+Traceback (most recent call last):
+  File "/home/ubuntu/Github/python_study/flask/study4/flaskr/__init__.py", line 39, in create_app
+    from . import auth
+  File "/home/ubuntu/Github/python_study/flask/study4/flaskr/auth.py", line 22
+    if request.method == 'POST'":
+                                ^
+SyntaxError: EOL while scanning string literal
+unable to load app 0 (mountpoint='') (callable not found or import error)
+  File "/home/ubuntu/Github/python_study/flask/study4/uwsgi.ini", line 2
+    socket = 127.0.0.1:5060
+                   ^
+SyntaxError: invalid syntax
+failed to parse file /home/ubuntu/Github/python_study/flask/study4/uwsgi.ini
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 22266)
+spawned uWSGI worker 1 (pid: 22396, cores: 1)
+Python auto-reloader enabled
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/1] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:02 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/2] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:03 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/3] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:17 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/4] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:24 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/5] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:25 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/6] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:25 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/7] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:25 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/8] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:26 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/9] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:55:26 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 18:56:09 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:5060).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/10] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:56:14 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 18:56:54 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:5060).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/11] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:07 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/12] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:45 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/13] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:45 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/14] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:46 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/15] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:46 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/16] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:46 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/17] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:46 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/18] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:57:46 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/19] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:58:43 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/20] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:58:44 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/21] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:58:44 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/22] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:58:44 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/23] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 18:58:44 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 19:00:17 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:5060).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/24] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 19:00:30 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 22396|app: -1|req: -1/25] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 19:01:01 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Wed Feb 12 19:01:07 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Feb 12 19:01:18 2020] ***
+compiled with version: 7.4.0 on 08 February 2020 15:00:46
+os: Linux-4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/Github/python_study/flask/study4
+writing pidfile to /home/ubuntu/Github/python_study/flask/study4/uwsgi.pid
+detected binary path: /home/ubuntu/Code/Python/virtual/py3env/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7086
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5060 fd 3
+Python version: 3.6.9 (default, Nov  7 2019, 10:44:02)  [GCC 8.3.0]
+Python main interpreter initialized at 0x5650b19263f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/Github/python_study/flask/study4/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5650b19263f0 pid: 23932 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23932)
+spawned uWSGI worker 1 (pid: 23934, cores: 1)
+Python auto-reloader enabled
+[pid: 23934|app: 0|req: 1/1] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 19:01:23 2020] GET / => generated 1673 bytes in 22 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 2/2] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 20:27:06 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 3/3] 183.202.108.177 () {42 vars in 760 bytes} [Wed Feb 12 20:27:07 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 4/4] 183.202.108.177 () {36 vars in 555 bytes} [Thu Feb 13 08:37:48 2020] GET / => generated 1673 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 5/5] 183.202.108.177 () {36 vars in 577 bytes} [Thu Feb 13 08:37:48 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 6/6] 120.208.208.24 () {36 vars in 554 bytes} [Fri Feb 14 07:54:30 2020] GET / => generated 1673 bytes in 59 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 7/7] 120.208.208.24 () {36 vars in 576 bytes} [Fri Feb 14 07:54:30 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 8/8] 120.208.208.24 () {40 vars in 728 bytes} [Fri Feb 14 08:06:30 2020] GET / => generated 1673 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 23934|app: 0|req: 9/9] 120.208.208.24 () {40 vars in 652 bytes} [Fri Feb 14 08:06:30 2020] GET /static/style.css => generated 1630 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 8 headers in 307 bytes (0 switches on core 0)
+[pid: 23934|app: 0|req: 10/10] 120.208.208.24 () {40 vars in 663 bytes} [Fri Feb 14 08:06:31 2020] GET /favicon.ico => generated 232 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+Fri Feb 14 15:31:31 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!

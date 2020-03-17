@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />
+		<title>Oss_List</title>
+	</head>
+	<body>
+		<h1>oss page</h1>
+		<ul>
+			{% for item in data %}
+			<li>{{ item }}</li>
+			{% endfor %}
+		</ul>
+		<p>{{ data }}</p>
+		<form action="">
+			{% csrf_token %}
+			<p><input type="file" name="image" id="file" onchange="fileSelected()"></p>
+		<!--	<p><img src="" alt="none" id="pre" width="300"></p> -->
+			<input type="button" onclick="uploadFile()" value="submit">
+		</form>
+		
+		<script>
+
+			function fileSelected(){
+				var file = document.getElementById('file');
+			}
+
+			function uploadFile(event){
+				var fd = new FormData();
+				fd.append('fileToUpload', document.getElementById('file').files[0]);
+				var xhr = new XMLHttpRequest();
+				xhr.addEventListener('load', complete, false);
+				xhr.open('POST', 'myoss');
+				xhr.send(fd)
+				return false;
+			}
+
+			function complete(evt){
+				console.log("complete")
+			}
+		</script>
+	</body>
+</html>
