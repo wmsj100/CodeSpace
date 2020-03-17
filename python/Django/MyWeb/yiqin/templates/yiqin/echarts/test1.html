@@ -1,0 +1,20 @@
+{% extends 'yiqin/base.html' %}
+
+{% block content %}
+{% load static %}
+<script src="{% static 'lib/echarts/echarts.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'yiqin/css/echarts/test1.css' %}">
+<h1>echarts test</h1>
+<div class="layui-row layui-col-space10">
+	<div class="layui-col-md12">
+		<div id="yiqin"></div>
+	</div>
+	<div class="layui-col-md7">
+		<div id="main"></div>
+	</div>
+	<div class="layui-col-md5">
+		<div id="test1"></div>
+	</div>
+</div>
+<script src="{% static 'yiqin/js/echarts/test1.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,9 @@
+*.log
+*_log
+log
+/static/
+__pycache__/
+*.swp
+*.swt
+*.pyc
+node_models

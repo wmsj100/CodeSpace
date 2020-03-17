@@ -16,8 +16,8 @@ email: wmsj100@hotmail.com
 
 ## 目录
 
-- Django 
-- Flask
+- Django django的学习
+- Flask flask的学习
 
 ## 参考
 
