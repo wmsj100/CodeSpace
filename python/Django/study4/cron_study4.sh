@@ -8,5 +8,5 @@
 
 riqi=$(date "+%Y-%m-%d")
 path=/home/ubuntu/Documents/GitHub/CodeSpace/python/Django/study4/app1/yiqin_json
-curl http://myweb.com:8001/app1/yiqin > ${path}/yiqin_${riqi}.json
+curl http://www.myweb.com:8001/app1/yiqin > ${path}/yiqin_${riqi}.json
 
