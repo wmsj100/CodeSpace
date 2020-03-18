@@ -5,7 +5,6 @@ from .models import Blog, ChinaDayList, ChinaDayAddList, DailyNewAddHistory, Dai
 import requests
 import json
 from .views_yiqin import YiQinApi, WriteToSql, TenXunYinQinApi
-from .views_oss import GetOSS
 from django import forms
 
 def jsonData(data):
@@ -66,19 +65,11 @@ def get_yiqi_api(request):
         return HttpResponse(data, content_type='application/json')
 
 def get_mydata(request):
-    tab = ['中国', '西安', '山西', '陕西']
+    tab = ['中国', '西安']
     reg_str = '|'.join(tab)
     resp = AreaTree.objects.filter(name__regex=reg_str).order_by('name').values()
 
     return HttpResponse(json.dumps(list(resp)))
-
-def get_oss(request):
-    if request.method == 'GET':
-        data = GetOSS('wmsj100test')
-        return render(request, 'app1/oss_list.html', {'data': data.list})
-#        return HttpResponse(data.list)
-    elif request.method == 'POST':
-        return HttpResponse(request)
 
 def form_test(request):
     if request.method == 'POST':

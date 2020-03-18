@@ -25,7 +25,7 @@ SECRET_KEY = 'ljuk39@(o^p%sws_(2!+3lmeyei9x_lk+m1&n21o)(g)$4q^_i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['myyun.com','myubuntu.com','myweb.com']
+ALLOWED_HOSTS = ['www.myyun.com','www.myubuntu.com','www.myweb.com']
 
 
 # Application definition

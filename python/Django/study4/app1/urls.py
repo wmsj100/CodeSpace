@@ -18,6 +18,5 @@ urlpatterns = [
     path('get_study3', views.get_api, name='get_study3'),
     path('yiqin', views.get_yiqi_api, name='get_yiqi_api'),
     path('mydata', views.get_mydata, name='get_mydata'),
-    path('myoss', views.get_oss, name='get_myoss'),
     path('form/', views.form_test, name='form_test'),
         ]
