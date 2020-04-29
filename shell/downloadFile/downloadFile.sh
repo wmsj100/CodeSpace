@@ -6,8 +6,18 @@
 # Distributed under terms of the MIT license.
 #
 
-shellDir=$(pwd)
-source $shellDir/common.sh
+DownloadFileConfPath=/etc/downloadFile.conf
+if [ ! -f "$DownloadFileConfPath" ];then
+	echo "$DownloadFileConfPath is not exist, please check !!!"
+	exit 1
+fi
+source $DownloadFileConfPath
+if [ -z "$DownloadFilePath" ];then
+	echo "check $DownloadFileConfPath, DownloadFilePath is not config or empty, check!!!"
+	exit 1
+fi
+source $DownloadFilePath/common.sh
+source $DownloadFilePath/unpackFile.sh
 
 RemoteInfo=${RemoteUser}@${RemoteIP}
 TMPDir="" # remoteHost tmp dir
@@ -18,8 +28,6 @@ FileType="file" # params is file|git
 
 # get file url
 getURL(){
-	CURDIR=$(pwd)
-
 	while [ -z "$URL" ];do
 		read -p "Input address https://XXX.tar.gz: " URL
 	done
@@ -52,10 +60,14 @@ getDir(){
 	case "$tmp" in
 		n*|N*) 
 			tmp=""
-			while [ -d $(realpath "$tmp" &>/dev/null) ];do
+			while [ -z "$tmp" ];do
 				read -p "Please input download path " tmp
 			done
 			CURDIR="$(realpath $tmp)"
+			if [ ! -d $CURDIR ];then
+				showError "$CURDIR is not exist"
+				exit 1
+			fi
 			;;
 		*)
 			CURDIR=$(pwd)
@@ -83,14 +95,6 @@ remoteCMD(){
 remoteSvnCmd(){
 	showError "svn not support, if need, please tell me!!!"
 	exit 1
-}
-
-# check expect result code
-checkExpectResultCode(){
-	if [ $? -ne 0 ];then
-		showError "$URL address is error, please check!!!"
-		exit 1
-	fi
 }
 
 # remote protocol is git
@@ -130,6 +134,7 @@ envPre(){
 	checkCmd expect || $CMD install -q -y expect
 	checkCmd file || $CMD install -q -y file
 	checkCmd unzip || $CMD install -q -y unzip
+	checkCmd zip || $CMD install -q -y unzip
 	checkCmd bzip2 || $CMD install -q -y bzip2
 	checkCmd gzip || $CMD install -q -y gzip
 	checkCmd xz || $CMD install -q -y xz
@@ -151,7 +156,7 @@ curHostCMD(){
 	# try unzip file
 	if [ "$SwitchZip" = "True" ];then
 		showPrint "Try to unzip $File"
-		compressFile $CURDIR/$File
+		unpackDownloadFile  $CURDIR/$File
 	fi
 }
 
@@ -187,25 +192,6 @@ automaticCmd(){
 	envPre
 	remoteCMD 
 	curHostCMD
-}
-
-
-# check shell exec
-checkExecute(){
-	local path=$1
-	local curShell=""
-
-	if [ -z "$path" ];then
-		showError "Please check checkExecute params"
-		exit 1
-	fi
-
-	for curShell in $(find $path -maxdepth 1 -type f -name "*.sh");do
-		if [ ! -x "$curShell" ];then
-			showPrint "$curShell is not executable,already modify it!"
-			chmod +x "$curShell"
-		fi
-	done
 }
 
 init(){

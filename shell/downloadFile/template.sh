@@ -6,9 +6,3 @@
 # Distributed under terms of the MIT license.
 #
 
-
-hello(){
-	echo "hello"
-}
-
-type -t hello

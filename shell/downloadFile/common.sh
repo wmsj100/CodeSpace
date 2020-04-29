@@ -6,9 +6,9 @@
 # Distributed under terms of the MIT license.
 #
 
-shellDir=$(pwd)
-source $shellDir/config
-source $shellDir/showLog.sh
+source $DownloadFilePath/config
+source $DownloadFileConfPath
+source $DownloadFilePath/showLog.sh
 
 expectShell(){
 expect <<EOF
@@ -24,6 +24,14 @@ expect <<EOF
 EOF
 }
 
+# check expect result code
+checkExpectResultCode(){
+	if [ $? -ne 0 ];then
+		showError "$URL address is error, please check!!!"
+		exit 1
+	fi
+}
+
 # check command is exist
 checkCmd(){
 	command -v $1 &>/dev/null
@@ -36,11 +44,28 @@ checkCmd(){
 
 # check file or dir exist
 checkExist(){
-	local target=$(realpath $1)
+	local target=$1
+	local type=$2
+
+	if [ -z "$target" ];then
+		showError "Param is emtpy, please input param"
+		exit 1
+	fi
+
+	target=$(realpath $1)
 
 	if [ ! -e "$target" ];then
 		showError "$target is not exist,please check!!!"
 		exit 1
+	fi
+
+	if [ -n "$type" ];then
+		if [ "$type" = "dir" ];then
+			if [ ! -d "$target" ];then
+				showError "$target is not a dir, please check!!!"
+				exit 1
+			fi
+		fi
 	fi
 }
 
@@ -63,8 +88,17 @@ checkFuncName(){
 
 # update downloadFile
 pullDownloadFile(){
+	local tmpDir=$(mktemp -d)
 	local remoteInfo=root@${StandHost}
-	expectShell "scp $remoteInfo:/usr/local/bin/downloadFile /usr/local/bin/"
+	expectShell "scp $remoteInfo:/root/downloadFile.tar.gz $tmpDir"
+	checkExpectResultCode
+	rm -f /usr/local/bin/downloadFile
+	rm -f /usr/local/bin/checkSo
+	rm -rf $DownloadFilePath
+	tar -xf $tmpDir/downloadFile.tar.gz -C $(dirname $DownloadFilePath)
+	ln -s $DownloadFilePath/downloadFile.sh /usr/local/bin/downloadFile
+	ln -s $DownloadFilePath/checkSo.sh /usr/local/bin/checkSo
+	rm -rf $tmpDir
 	showOK "downloadFile update success!!!"
 }
 
@@ -72,8 +106,11 @@ pullDownloadFile(){
 # just use for developer,Please think more
 pushDownloadFile(){
 	local remoteInfo=root@${StandHost}
+	local tmpDir=$(mktemp -d)
 	showPrint "This will force cover remote host file use local host"
-	expectShell "scp /usr/local/bin/downloadFile $remoteInfo:/usr/local/bin/downloadFile" 
+	tar -zcf $tmpDir/downloadFile.tar.gz -C $(dirname $DownloadFilePath) $(basename $DownloadFilePath)
+	expectShell "scp $tmpDir/downloadFile.tar.gz $remoteInfo:/root/" 
 	checkExpectResultCode
+	rm -rf $tmpDir
 	showOK "Push downloadFile ok!!!"
 }

@@ -1,27 +1,18 @@
-#! /bin/bash
-#
-# config
-# Copyright (C) 2020 wanghao <wanghao054@chinasoftinc.com>
-#
-# Distributed under terms of the MIT license.
-#
-
-
-# downloadFile Global params start 
+# =====================> [global] <==========================
+DownloadFilePath=/opt/tools/installed/downloadFile/
+# =====================> [downloadFile] <====================
 RemoteIP=159.138.0.217
 RemoteUser=root
 PASSWD=CloudBU@123
-SwitchZip="True" # False: just download File; True: download and try unzip file
+SwitchZip="False" # False: just download File; True: download and try unzip file
 StandHost=139.9.135.47
 
-# downloadFile Global params end
-
-# checkSo Global params
+# =====================> [checkSo] <=========================
 # CheckSoGlobalPath is cur host checkSo path, when use checkSoPull chang is
 CheckSoGlobalPath=/opt/tools/installed/checkSo
 CheckSoTmpPath=/tmp/CheckSo-unpack/ # unzip file to here
-DefaultPlatform="AArch64" # target compile platform is aarch64
-JarLogName="JarResult.log"
-OutLogName="out.csv"
-NonJarLogName="NonJarResult.log"
-## checkSo Global params end
+CheckSoTmpOriginPath=$CheckSoTmpPath/origin/
+SkipDotDir="git|github|svn"
+SkipDotSuffix="py|PY|pyc|pyw|derived|decTest|ht|sh|txt|whl|yml|xml|png|gif|jgp|jpeg|svg|woff|woff2|json|ico|pem|log|java|html|css|js|ts|bat|exe|c|md|doc|egg-info|class|jsp|properties|MF"
+SkipSuffix="NOTICE|LICENSE|DEPENDENCIES|README"
+SoStoragePath=/root/SoStorage
